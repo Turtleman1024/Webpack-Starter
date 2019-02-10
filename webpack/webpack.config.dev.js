@@ -28,11 +28,13 @@ module.exports = merge(common, {
           emitWarning: true,
         }
       },
-      {
-        test: /\.(js)$/,
-        include: Path.resolve(__dirname, '../src'),
-        loader: 'babel-loader'
-      },
+      // This converts the javascript to a earlier version
+      // of javascript version 5
+      // {
+      //   test: /\.(js)$/,
+      //   include: Path.resolve(__dirname, '../src'),
+      //   loader: 'babel-loader'
+      // },
       {
         test: /\.s?css$/i,
         use: ['style-loader', 'css-loader?sourceMap=true', 'sass-loader']
